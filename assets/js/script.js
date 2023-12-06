@@ -5,7 +5,7 @@ const cartIcon = document.querySelector('.cartIcon')
 const btnClear = document.querySelector('.btnClear')
 const cartIconDiv = document.querySelector('#cartIconDiv')
 
-const keysArray = []
+let keysArray = []
 
 for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i)
@@ -59,6 +59,7 @@ fetch(booksApiUrl)
                 localStorage.setItem(bookTitle, bookTitle)
 
                 if (!keysArray.includes(bookTitle)) {
+                    keysArray.push(bookTitle)
                     createAndAppendLi(bookTitle)
                 }
             })
@@ -89,6 +90,7 @@ btnClear.addEventListener('click', function() {
     })
 
     cartUl.innerHTML = ''
+    keysArray = []
 })
 
 function createAndAppendLi(name) {
