@@ -3,6 +3,7 @@ const libreriaRow = document.querySelector('.row')
 const cartUl = document.querySelector('#cartContainer')
 const cartIcon = document.querySelector('.cartIcon')
 const btnClear = document.querySelector('.btnClear')
+const cartIconDiv = document.querySelector('#cartIconDiv')
 
 const keysArray = []
 
@@ -73,6 +74,7 @@ fetch(booksApiUrl)
 
 cartIcon.addEventListener('click', function() {
     cartUl.classList.toggle('show')
+    cartIconDiv.classList.toggle('toggle')
 })
 
 btnClear.addEventListener('click', function() {
@@ -85,7 +87,7 @@ btnClear.addEventListener('click', function() {
     keysToRemove.forEach(key => {
         localStorage.removeItem(key)
     })
-    
+
     cartUl.innerHTML = ''
 })
 
