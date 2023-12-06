@@ -36,7 +36,7 @@ fetch(booksApiUrl)
                             <button class="btn btn-primary btn-cart">Add to cart</button>
                         </div>
                         <div class="col-5">
-                            <button class="btn btn-primary btn-delete">Delete</button>
+                            <button class="btn btn-danger btn-delete">Delete</button>
                         </div>
                     </div>
                 </div>
