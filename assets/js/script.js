@@ -18,20 +18,18 @@ fetch(booksApiUrl)
         let elemCardHtml = ''
         data.forEach(book => {
         elemCardHtml += `
-        <div class="col-lg-3 aggiungi col-md-4 col-sm-6">
-            <div class="card" style="width: 16rem;">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card mb-2" style="width: 16rem;">
                 <img src=${book.img} class="card-img-top" alt="img">
                 <div class="card-body">
                     <h5 class="card-title">${book.title}</h5>
                     <div class="row">
-                        <div class="col-6">
-                            <p class="card-text">Price: ${book.price}</p>
-                        </div>
-                        <div class="col-6">
+                        <div class="col">
                             <p class="card-text">Category: ${book.category}</p>
+                            <p class="card-text">Price: ${book.price}€</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-2">
                         <div class="col-7">
                             <button class="btn btn-primary btn-cart">Add to cart</button>
                         </div>
