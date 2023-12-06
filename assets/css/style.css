@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    color: brown;
+}
+
+#cartContainer {
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 95px;
+    padding: 0;
+    background-color: white;
+    list-style: none;
+    transition: display 0.5s ease;
+}
+
+#cartContainer.show {
+    display: block;
+}
+
+#cartIconDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(209, 209, 209);
+    border-radius: 5px;
+    position: fixed;
+    top: 40px;
+    left: 10px;
+}
+
+#cartIconDiv i {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: aquamarine;
+}
